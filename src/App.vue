@@ -3,7 +3,7 @@
     <router-link to="/home">home</router-link> |
     <router-link to="/vuexdemo">vuexdemo</router-link> |
     <router-link to="/vuexdemo1">vuexdemo1</router-link>
-  
+    
    <router-view></router-view>
    </div>
 </template>

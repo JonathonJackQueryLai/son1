@@ -1,6 +1,6 @@
 <template>
   <div class='Login'>
-      
+      <input type="text">
   </div>
 </template>
 
@@ -8,11 +8,16 @@
 export default {
   name: 'Login',
   data(){
-    return {}
+    return {
+        username:'admin',
+        psw:'123qwe',
+    }
   },
   components: {},
   created(){},
-  mounted(){},
+  mounted(){
+
+  },
   methods: {}
 }
 </script>

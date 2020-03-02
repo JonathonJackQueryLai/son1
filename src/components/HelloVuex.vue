@@ -1,6 +1,5 @@
 <template>
   <div id="HelloVuex">
-    <H2>------HelloVuex内容如下：------</H2>
 
   </div>
 </template>

@@ -1,8 +1,23 @@
 
 <template id="vuexdemo">
   <div id="vuexdemo">
-    <h2>我是父组件</h2>
- 
+    <h2>肥彤 早晨</h2>
+    
+    <div>
+      <ul>
+        <li>123</li>
+        <li id=""></li>
+        <li id=""></li>
+        <li id=""></li>
+        <li id=""></li>
+        <li id=""></li>
+        <li id=""></li>
+        <li id=""></li>
+        <li id=""></li>
+        <li id=""></li>
+        <li id=""></li>
+      </ul>
+    </div>
     <vuexdemo1 :counter1="counter" :msg1="msg"></vuexdemo1>
 
     <!-- //:{{$store.getters.morethan20}} -->
