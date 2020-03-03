@@ -1,6 +1,7 @@
+
 module.exports = {
   
-  publicPath: process.env.NODE_ENV === "production" ? "./" : "./",
+  publicPath:  "./",
   outputDir:'dist',
   pwa: {
     name: 'Hymson1',
@@ -13,6 +14,12 @@ module.exports = {
       warnings: false,
       errors: true
     },
+    // proxy: {
+    //   target:'http://123.207.32.32:8000/',
+    //   changeOrigin: true,
+    // }
   },
+  
+  
   // baseUrl: "./",
 }

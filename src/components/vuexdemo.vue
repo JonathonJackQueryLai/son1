@@ -3,23 +3,8 @@
   <div id="vuexdemo">
     <h2>肥彤 早晨</h2>
     
-    <div>
-      <ul>
-        <li>123</li>
-        <li id=""></li>
-        <li id=""></li>
-        <li id=""></li>
-        <li id=""></li>
-        <li id=""></li>
-        <li id=""></li>
-        <li id=""></li>
-        <li id=""></li>
-        <li id=""></li>
-        <li id=""></li>
-      </ul>
-    </div>
     <vuexdemo1 :counter1="counter" :msg1="msg"></vuexdemo1>
-
+    <newf />
     <!-- //:{{$store.getters.morethan20}} -->
 
     <!-- <h2>{{$store.getters.getmorethage(8)}}</h2> -->
@@ -30,6 +15,8 @@
 <script>
 import BScroll from "better-scroll";
 import vuexdemo1 from "@/components/vuexdemo1";
+import newf from "@/components/newf";
+
 export default {
   data() {
     return {
@@ -39,7 +26,8 @@ export default {
   },
 
   components: {
-    vuexdemo1
+    vuexdemo1,
+    newf
   },
   created() {},
   mounted() {},
