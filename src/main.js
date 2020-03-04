@@ -52,10 +52,12 @@ new Vue({
 // }
 
 
-// axios({
-//   // url:'http://123.207.32.32:8000/home/data?type=pop&page=1'
-//   url:'https://47.106.174.83/home'
-// }).then(res =>{
-//   console.log(res.status);
-//   console.log(res.statusText)
-// })
+axios({
+  // url:'http://123.207.32.32:8000/home/data?type=pop&page=1'
+  url:'http://47.106.71.73:5000/api/services/app/HymsonNews/GetAll'
+}).then(res =>{
+
+  console.log(res)
+  console.log(res.data.result.items[0])
+
+})

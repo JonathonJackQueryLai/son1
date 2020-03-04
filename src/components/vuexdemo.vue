@@ -2,7 +2,7 @@
 <template id="vuexdemo">
   <div id="vuexdemo">
     <h2>肥彤 早晨</h2>
-    
+
     <vuexdemo1 :counter1="counter" :msg1="msg"></vuexdemo1>
     <newf />
     <!-- //:{{$store.getters.morethan20}} -->
