@@ -7,23 +7,20 @@
       <span>{{index}}:{{}}</span>
       <h2>{{item.toString()}}</h2>
     </div>-->
-    <div class="box">
-      <ul>
-        <li>这是第1行数据</li>
-        <li>这是第2行数据</li>
-        <li>这是第3行数据</li>
-        <li>这是第4行数据</li>
-        <li>这是第5行数据</li>
-        <li>这是第6行数据</li>
-        <li>这是第7行数据</li>
-        <li>这是第8行数据</li>
-        <li>这是第9行数据</li>
-        <li>这是第10行数据</li>
-      </ul>
+    <!-- 内容用{} .box>ul>li{这是第$行数据}*10 -->
+    <br />
+    <div class="num">
+      <span>
+        <label for="isuser">新闻Id:</label>
+        <input type="text" id="number" v-model="message" placeholder="输入新闻id" />
+
+        <p>Message is: {{ message }}</p>
+      </span>
     </div>
-    <div class="father" v-for="(item, key) of string1" :key="key">
+
+    <!-- <div class="father" v-for="(item, key) of string1" :key="key">
       <div class="item-list" v-for="innerItem of item" :key="innerItem">{{innerItem}}</div>
-    </div>
+    </div>-->
   </div>
 </template>
 
@@ -36,7 +33,8 @@ export default {
   name: "newf",
   data() {
     return {
-      string1: []
+      string1: [],
+      message: null
     };
   },
   components: {},
@@ -50,6 +48,9 @@ export default {
   methods: {
     bnget() {},
     bnpost() {},
+    clean() {
+      this.message = null;
+    },
 
     getMultiData1() {
       getNewMultidata().then(res => {
