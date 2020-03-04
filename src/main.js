@@ -15,19 +15,19 @@ new Vue({
 }).$mount('#app')
 
 
-// axios.post('http://47.106.71.73:5000/api/TokenAuth/Authenticate', {
+axios.post('http://47.106.71.73:5000/api/TokenAuth/Authenticate', {
 
-//   "userNameOrEmailAddress": "admin",
-//   "password": "123qwe",
+  "userNameOrEmailAddress": "admin",
+  "password": "123qwe",
 
-// })
-//   .then(function (response) {
-//     console.log('Brearer ' + response.data.result.accessToken);
-//     this.$store.tokenString =  'Brearer ' + response.data.result.accessToken;
-//   })
-//   .catch(function (error) {
-//     console.log(error);
-//   });
+})
+  .then(function (response) {
+    console.log('Brearer ' + response.data.result.accessToken);
+    this.$store.tokenString = 'Brearer ' + response.data.result.accessToken;
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
 
 // export default function request(config) {
 //   const instance = axios.create({
@@ -54,13 +54,13 @@ new Vue({
 
 axios({
   // url:'http://123.207.32.32:8000/home/data?type=pop&page=1'
-  url:'http://47.106.71.73:5000/api/services/app/HymsonNews/GetAll'
-}).then(res =>{
+  url: 'http://47.106.71.73:5000/api/services/app/HymsonNews/GetAll'
+}).then(res => {
 
   // console.log(res)
   // for(let i in res.data.result.items){
   //   console.log(res.data.result.items[i]);
-    
+
   // }
   // console.log(res.data.result.items[0])
 

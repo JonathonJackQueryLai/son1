@@ -11,11 +11,21 @@ const Vuexdemo = () => import('@/components/vuexdemo')
 const Vuexdemo1 = () => import('@/components/vuexdemo1')
 const Home = () => import('@/views/Home')
 const Newf = () => import('@/components/newf')
+const Tool = () => import('@/components/tool')
+const Me = () => import('@/components/me')
 
 const routes = [
   {
     path: '/',
     redirect: "/home"
+  },
+  {
+    path: '/tool',
+    component: Tool
+  },
+  {
+    path: '/me',
+    component: Me
   },
   {
     path: '/newf',
@@ -26,12 +36,12 @@ const routes = [
     component: Hello1
   },
   {
-    path:'/vuexdemo',
-    component:Vuexdemo
+    path: '/vuexdemo',
+    component: Vuexdemo
   },
   {
-    path:'/vuexdemo1',
-    component:Vuexdemo1
+    path: '/vuexdemo1',
+    component: Vuexdemo1
   },
   {
     path: '/hello2',
