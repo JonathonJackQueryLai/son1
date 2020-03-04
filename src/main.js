@@ -57,11 +57,11 @@ axios({
   url:'http://47.106.71.73:5000/api/services/app/HymsonNews/GetAll'
 }).then(res =>{
 
-  console.log(res)
-  for(let i in res.data.result.items){
-    console.log(res.data.result.items[i]);
+  // console.log(res)
+  // for(let i in res.data.result.items){
+  //   console.log(res.data.result.items[i]);
     
-  }
+  // }
   // console.log(res.data.result.items[0])
 
 })

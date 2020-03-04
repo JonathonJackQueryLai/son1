@@ -5,7 +5,7 @@ import axios from 'axios'
 axios.defaults.timeout = 5000;                        //响应时间
 axios.defaults.headers.post['Content-Type'] ='application/json,text/html,application/xhtml+xml,application/xml;charset=UTF-8';        //配置请求头
 axios.defaults.headers.post['User-Agent'] = ' Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36'
-axios.defaults.headers.common['Authorization'] = AUTH_TOKEN;
+// axios.defaults.headers.common['Authorization'] = AUTH_TOKEN; 
 
 if (process.env.NODE_ENV === "development") {
  axios.defaults.baseURL='/turn/'
