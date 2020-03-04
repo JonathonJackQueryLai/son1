@@ -58,6 +58,10 @@ axios({
 }).then(res =>{
 
   console.log(res)
-  console.log(res.data.result.items[0])
+  for(let i in res.data.result.items){
+    console.log(res.data.result.items[i]);
+    
+  }
+  // console.log(res.data.result.items[0])
 
 })

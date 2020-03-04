@@ -10,11 +10,16 @@ const Hello2 = () => import('@/components/hello2')
 const Vuexdemo = () => import('@/components/vuexdemo')
 const Vuexdemo1 = () => import('@/components/vuexdemo1')
 const Home = () => import('@/views/Home')
+const Newf = () => import('@/components/newf')
 
 const routes = [
   {
     path: '/',
     redirect: "/home"
+  },
+  {
+    path: '/newf',
+    component: Newf
   },
   {
     path: '/hello1',

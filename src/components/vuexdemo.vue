@@ -37,12 +37,14 @@ export default {
     },
     modify() {
       // this.$store.commit("updateInfo")
+     // 异步
       this.$store.dispatch("aupdateinfo", "我已经完成");
     },
     deleteINFO() {
       this.$store.commit("deleteInfo");
     },
     deleteNum() {
+      // 使用commit提交一个方法 
       this.$store.commit("deleteNum");
     },
     add() {
