@@ -15,19 +15,19 @@ new Vue({
 }).$mount('#app')
 
 
-axios.post('http://47.106.71.73:5000/api/TokenAuth/Authenticate', {
+// axios.post('http://47.106.71.73:5000/api/TokenAuth/Authenticate', {
 
-  "userNameOrEmailAddress": "admin",
-  "password": "123qwe",
+//   "userNameOrEmailAddress": "admin",
+//   "password": "123qwe",
 
-})
-  .then(function (response) {
-    console.log('Brearer ' + response.data.result.accessToken);
-    this.$store.tokenString = 'Brearer ' + response.data.result.accessToken;
-  })
-  .catch(function (error) {
-    console.log(error);
-  });
+// })
+//   .then(function (response) {
+//     console.log('Brearer ' + response.data.result.accessToken);
+//     this.$store.tokenString = 'Brearer ' + response.data.result.accessToken;
+//   })
+//   .catch(function (error) {
+//     console.log(error);
+//   });
 
 // export default function request(config) {
 //   const instance = axios.create({

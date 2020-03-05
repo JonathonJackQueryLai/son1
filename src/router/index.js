@@ -9,7 +9,7 @@ const Hello1 = () => import('@/components/hello1')
 const Hello2 = () => import('@/components/hello2')
 const Vuexdemo = () => import('@/components/vuexdemo')
 const Vuexdemo1 = () => import('@/components/vuexdemo1')
-const Home = () => import('@/views/Home')
+const Login = () => import('components/login')
 const Newf = () => import('@/components/newf')
 const Tool = () => import('@/components/tool')
 const Me = () => import('@/components/me')
@@ -17,7 +17,7 @@ const Me = () => import('@/components/me')
 const routes = [
   {
     path: '/',
-    redirect: "/home"
+    redirect: "/login"
   },
   {
     path: '/tool',
@@ -48,9 +48,9 @@ const routes = [
     component: Hello2
   },
   {
-    path: '/home',
-    name: 'Home',
-    component: Home
+    path: '/login',
+    name: 'login',
+    component: Login
   },
   {
     path: "/hellovuex",
