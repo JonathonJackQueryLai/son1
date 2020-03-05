@@ -1,8 +1,8 @@
 
 module.exports = {
-  
-  publicPath:  "./",
-  outputDir:'dist',
+
+  publicPath: "./",
+  outputDir: 'dist',
   pwa: {
     name: 'Hymson1',
     themeColor: '#EF7143'
@@ -19,7 +19,18 @@ module.exports = {
     //   changeOrigin: true,
     // }
   },
-  
-  
+  configureWebpack: {
+    resolve: {
+      alias: {
+        'components': '@/components',
+        'content': 'components/content',
+        'common': 'components/common',
+        'assets': '@/assets',
+        'network': '@/network',
+        'views': '@/views',
+      }
+    }
+  }
+
   // baseUrl: "./",
 }
