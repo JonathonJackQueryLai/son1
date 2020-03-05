@@ -4,17 +4,22 @@
     <!-- <router-link to="/vuexdemo">vuexdemo</router-link>|
     <router-link to="/vuexdemo1">vuexdemo1</router-link> |-->
     <!-- <router-link to="/newf">find</router-link>| -->
+    <hair />
     <headertab />
-    <router-view></router-view>
+    <keep-alive>
+      <router-view />
+    </keep-alive>
   </div>
-</template>
+</template> 
 
 <script>
 import headertab from "@/common/headertab";
+import hair from "@/common/hair";
 export default {
   name: "app",
   components: {
-    headertab
+    headertab,
+    hair
   }
 };
 </script>

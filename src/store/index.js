@@ -5,7 +5,9 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    // Auth:localStorage.getItem(),
+    // AuthToken:localStorage.getItem(),
+    Authorization: localStorage.getItem('Authorization') ? localStorage.getItem('Authorization') : '',
+    refreshToken:"",
     tokenString:'', 
     counter2: 1000,
     student: [
