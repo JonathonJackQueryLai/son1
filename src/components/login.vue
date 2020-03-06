@@ -1,9 +1,10 @@
 <template>
-  <div class="Me">
+  <div class="login">
     <div class="nameio">
       <span>
         <label for="isuser">用户：</label>
         <input type="text" placeholder="输入名字" v-model="userinput" />
+        <h2>{{$store.state.Authorization}}</h2>
       </span>
     </div>
 
@@ -23,8 +24,10 @@
 
 <script scope>
 import getTokenData from "@/http/login";
+
+// Vue.use(Form);
 export default {
-  name: "Me",
+  name: "login",
   data() {
     return {
       userinput: "",

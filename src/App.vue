@@ -25,6 +25,7 @@ export default {
 </script>
 
 <style>
+@import "./assets/css/base.css";
 .ul1 {
   display: block;
 }
