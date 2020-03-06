@@ -24,7 +24,7 @@
 
 <script scope>
 import getTokenData from "@/http/login";
-
+// 
 // Vue.use(Form);
 export default {
   name: "login",
