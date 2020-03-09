@@ -37,9 +37,17 @@ export function getMachineToolOee() {
   })
 }
 
+export function getMaintenance1() {
+  return axios({
+    url: 'api/services/app/HymSonDevice/GetHymSonDeviceForView?deviceSn=Y456123789111',
+
+  })
+}
+
+
 export function getMaintenance() {
   return axios({
-    url: '/api/services/app/HymSonDevice/GetHymSonDeviceForView',
+    url: 'api/services/app/HymsonMaintenanceRecord/GetAll',
 
   })
 }

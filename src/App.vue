@@ -4,9 +4,10 @@
     <!-- <router-link to="/vuexdemo">vuexdemo</router-link>|
     <router-link to="/vuexdemo1">vuexdemo1</router-link> |-->
     <!-- <router-link to="/newf">find</router-link>| -->
-    <hair />
-    <headertab />
+
+          <headertab />
     <keep-alive>
+
       <router-view />
     </keep-alive>
   </div>
@@ -14,18 +15,20 @@
 
 <script>
 import headertab from "@/common/headertab";
-import hair from "@/common/hair";
+
 export default {
   name: "app",
   components: {
-    headertab,
-    hair
+    headertab
   }
 };
 </script>
 
 <style>
 @import "./assets/css/base.css";
+.title {
+  font: 50px;
+}
 .ul1 {
   display: block;
 }
@@ -38,3 +41,5 @@ export default {
   margin-top: 60px;
 }
 </style>
+
+

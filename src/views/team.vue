@@ -1,15 +1,32 @@
 <template>
   <div class="team">
+    <div class="secondhead">
+      <newheader>
+        <button slot="left" @click="btnback">返回</button>
+      </newheader>
+      <newheader>
+        <h2 slot="center">team</h2>
+      </newheader>
+      <newheader>
+        <h2 slot="right">通知</h2>
+      </newheader>
+    </div>
+
     <h2>
       <button @click="bnc">dianji</button>
     </h2>
-    <ul class="foreach"></ul>
-    <li v-for="(item, index) in array" :key="index">{{item.userName}} - {{item.rank}}</li>
+    <ul class="foreach">
+      <li
+        v-for="(item, index) in array"
+        :key="index"
+      >{{item.userName}} - {{item.rank}} -{{item.userId}}</li>
+    </ul>
   </div>
 </template>
 
 <script scope>
 import { getTeamData } from "@/http/machineInfo";
+import newheader from "@/common/newheader";
 export default {
   name: "team",
   data() {
@@ -17,7 +34,9 @@ export default {
       array: []
     };
   },
-  components: {},
+  components: {
+    newheader
+  },
   created() {
     this.getTeamData;
   },
@@ -30,6 +49,9 @@ export default {
         console.log(res1.result.items);
         this.array = res1.result.items;
       });
+    },
+    btnback() {
+      this.$router.push("/home");
     }
   }
 };

@@ -1,3 +1,7 @@
+// const path = require("path");
+// function resolve(dir) {
+//   return path.join(__dirname, dir);
+// }
 
 module.exports = {
 
@@ -23,8 +27,8 @@ module.exports = {
     resolve: {
       alias: {
         'components': '@/components',
-        'content': 'components/content',
-        'common': 'components/common',
+        'content': '@/content',
+        'common': '@/common',
         'assets': '@/assets',
         'network': '@/network',
         'views': '@/views',

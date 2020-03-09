@@ -2,10 +2,16 @@
   <!-- ul>li.item${item number:$}*3 -->
   <div class="hair">
     <div class="item1">
-      
-      <button @click="btnexit" style="color:green">返回</button>
-      <button @click="demopro1" style="color:green">骊歌十重山</button>
-      <button @click="demopro2" style="color:green">骊歌十一重山</button>
+      <div class="center">
+        <slot name="left">
+          <button @click="btnexit" style="color:green">返回</button>
+        </slot>
+        <slot name="center">
+          <button @click="demopro1" style="color:green">promise</button>
+          <button @click="demopro2" style="color:green">骊歌十一重山</button>
+        </slot>
+        <slot name="right"></slot>
+      </div>
     </div>
   </div>
 </template>

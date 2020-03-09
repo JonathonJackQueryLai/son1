@@ -7,8 +7,9 @@ export default new Vuex.Store({
   state: {
     // AuthToken:localStorage.getItem(),
     Authorization: localStorage.getItem('Authorization') ? localStorage.getItem('Authorization') : '',
-    refreshToken:"",
-    tokenString:'', 
+
+    refreshToken: "",
+    tokenString: '',
     counter2: 1000,
     student: [
       {
@@ -24,11 +25,11 @@ export default new Vuex.Store({
         id: 1, age: 35, name: 'd'
       },
     ],
-    info:{
-      name:'Tony',
-      age:'170'
+    info: {
+      name: 'Tony',
+      age: '170'
     },
-    array1:[1,2,3,4]
+    array1: [1, 2, 3, 4]
   },
   mutations: {
     increase(state) {
@@ -38,31 +39,31 @@ export default new Vuex.Store({
       state.counter2--
     },
 
-    increasenum(state,num){
+    increasenum(state, num) {
       state.counter2 += num
     },
-    substraction(state,num){
-      state.counter2 -= num 
+    substraction(state, num) {
+      state.counter2 -= num
     },
-    addstudent(state,stu){
+    addstudent(state, stu) {
       state.student.push(stu)
     },
-    updateInfo(state){
+    updateInfo(state) {
       // state.info.age = '17';
-      Vue.set(state.info,'age','180')
+      Vue.set(state.info, 'age', '180')
     },
-    deleteInfo(state){
-      Vue.delete(state.info,'name','Tony')
+    deleteInfo(state) {
+      Vue.delete(state.info, 'name', 'Tony')
       // delete state.info;
     },
-    deleteNum(state){
-      Vue.delete(state.array1,0)
+    deleteNum(state) {
+      Vue.delete(state.array1, 0)
     }
   },
   // 如果数据需要经过处理后才能进行提取的 就在getters里面进行处理
 
   getters: {
-    tosarray(state){
+    tosarray(state) {
       return state.array1.toString()
     },
     morethan20(state) {
@@ -70,26 +71,26 @@ export default new Vuex.Store({
       return state.student.filter(s => s.age > 15)
     },
     powernum(state) {
-      return state.counter2 *state.counter2
+      return state.counter2 * state.counter2
     },
-    getLeght(state,getters){
+    getLeght(state, getters) {
       return getters.morethan20.length
     },
-    getmorethage(state){
+    getmorethage(state) {
       // return age =>{ return state.student.filter(s=>s.age>age)}
-        return function(age){
-          return state.student.filter(s=>s.age>age)
-        }
-      
+      return function (age) {
+        return state.student.filter(s => s.age > age)
+      }
+
     }
 
   },
   actions: {
-    aupdateinfo(content){
+    aupdateinfo(content) {
       setTimeout(() => {
         content.commit('updateInfo')
         console.log(paylod);
-        
+
       }, 1000);
     }
   },

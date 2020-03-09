@@ -10,6 +10,9 @@ const Tool = () => import('@/components/tool')
 const Home = () => import('@/views/Home')
 const Team = () => import('@/views/team')
 const MachineToolStatus = () => import('@/views/machineToolStatus')
+const Shop = () => import('@/views/shop')
+const Maintain = () => import('@/views/maintain')
+const MachineOee = () => import('@/views/machineOee')
 
 const routes = [
   {
@@ -37,7 +40,21 @@ const routes = [
   {
     path: "/home",
     component: Home,
+  },
+  {
+    path: "/shop",
+    component: Shop,
+  },
+  {
+    path: '/maintain',
+    component: Maintain
+  },
+  {
+    path: '/machineoee',
+    component: MachineOee
   }
+
+
 
 ]
 

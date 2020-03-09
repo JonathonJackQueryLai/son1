@@ -15,9 +15,9 @@ export default {
   components: {},
   created() {},
   mounted() {
-      getMachineState().then(res =>{
-          console.log(res)
-      })
+    getMachineState().then(res => {
+      console.log(res);
+    });
   },
   methods: {}
 };
