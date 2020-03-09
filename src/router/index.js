@@ -3,16 +3,13 @@ import VueRouter from 'vue-router'
 
 Vue.use(VueRouter)
 
-const HelloWorld = () => import('@/components/HelloWorld')
-const HelloVuex = () => import('@/components/HelloVuex')
-const Hello1 = () => import('@/components/hello1')
-const Hello2 = () => import('@/components/hello2')
-const Vuexdemo = () => import('@/components/vuexdemo')
-const Vuexdemo1 = () => import('@/components/vuexdemo1')
+
 const Login = () => import('@/components/login')
 const Newf = () => import('@/components/newf')
 const Tool = () => import('@/components/tool')
-const Me = () => import('@/components/me')
+const Home = () => import('@/views/Home')
+const Team = () => import('@/views/team')
+const MachineToolStatus = () => import('@/views/machineToolStatus')
 
 const routes = [
   {
@@ -20,55 +17,28 @@ const routes = [
     redirect: "/login"
   },
   {
-    path: '/tool',
-    component: Tool
-  },
-  {
-    path: '/me',
-    component: Me
+    path: '/machineToolStatus',
+    component: MachineToolStatus
   },
   {
     path: '/newf',
     component: Newf
   },
-  {
-    path: '/hello1',
-    component: Hello1
-  },
-  {
-    path: '/vuexdemo',
-    component: Vuexdemo
-  },
-  {
-    path: '/vuexdemo1',
-    component: Vuexdemo1
-  },
-  {
-    path: '/hello2',
-    component: Hello2
-  },
+
   {
     path: '/login',
     name: 'login',
     component: Login
   },
   {
-    path: "/hellovuex",
-    component: HelloVuex,
+    path: "/team",
+    component: Team,
   },
   {
-    path: "/helloworld",
-    component: HelloWorld,
-  },
-
-  {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    path: "/home",
+    component: Home,
   }
+
 ]
 
 const router = new VueRouter({

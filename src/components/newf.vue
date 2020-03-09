@@ -47,7 +47,7 @@ export default {
     // this.getNewData1();
   },
 
-  mounted() {},
+  mounted() {console.log("创建name新闻");},
   updated() {},
   methods: {
     bnget() {

@@ -15,7 +15,7 @@
           <input type="text" placeholder="输入密码" v-model="pwsinput" />
         </span>
       </div>
-      <div class="btnlogin" @click="btnlogin">
+      <div class="btnlogin">
         <button @click="btnlogin">登录</button>
       </div>
     </div>
@@ -24,7 +24,10 @@
 
 <script scope>
 import getTokenData from "@/http/login";
-// 
+import Vue from 'vue'
+import VueCookies from 'vue-cookies'
+Vue.use(VueCookies)
+//
 // Vue.use(Form);
 export default {
   name: "login",
@@ -51,8 +54,11 @@ export default {
       } else {
         // console.log(this.userinput + "," + this.pwsinput);
         getTokenData(this.userinput, this.pwsinput);
-        this.$router.push("/newf");
+        this.$router.push("/home");
       }
+    },
+    getcookies() {
+      window.$cookies.config('30d')
     }
   }
 };
