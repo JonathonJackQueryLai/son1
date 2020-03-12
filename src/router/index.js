@@ -13,11 +13,27 @@ const MachineToolStatus = () => import('@/views/machineToolStatus')
 const Shop = () => import('@/views/shop')
 const Maintain = () => import('@/views/maintain')
 const MachineOee = () => import('@/views/machineOee')
+const Notify = () => import('@/common/notifypage')
+const Eff = () => import('@/views/hymsonEfficient')
+const Order = () => import('@/views/order')
+const Statistics = () => import('@/views/statistics')
 
 const routes = [
   {
     path: '/',
-    redirect: "/login"
+    redirect: "/home"
+  },
+  {
+    path: '/eff',
+    component: Eff
+  },
+  {
+    path: '/statistics',
+    component: Statistics
+  },
+  {
+    path: '/order',
+    component: Order
   },
   {
     path: '/machineToolStatus',
@@ -52,7 +68,12 @@ const routes = [
   {
     path: '/machineoee',
     component: MachineOee
+  },
+  {
+    path: '/notify',
+    component: Notify
   }
+
 
 
 

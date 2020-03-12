@@ -3,11 +3,7 @@
     <div class="secondhead">
       <newheader>
         <button slot="left" @click="btnback">返回</button>
-      </newheader>
-      <newheader>
         <h2 slot="center">team</h2>
-      </newheader>
-      <newheader>
         <h2 slot="right">通知</h2>
       </newheader>
     </div>
@@ -19,7 +15,7 @@
       <li
         v-for="(item, index) in array"
         :key="index"
-      >{{item.userName}} - {{item.rank}} -{{item.userId}}</li>
+      >{{item.userName}} - {{item.rank}} - {{item.userId}}</li>
     </ul>
   </div>
 </template>

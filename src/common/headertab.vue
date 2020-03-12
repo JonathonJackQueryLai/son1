@@ -1,6 +1,6 @@
 <template>
   <div class="head">
-    <van-goods-action id="fw">
+    <van-goods-action class="fw">
       <van-goods-action-icon icon="chat-o" text="home" to="/home" color="#07c160" />
       <van-goods-action-icon icon="cart-o" text="find" to="/newf" color="#07c160" />
       <van-goods-action-icon icon="cart-o" text="login" to="/login" color="#07c160" />
@@ -34,11 +34,10 @@ export default {
 };
 </script>
 <style lang='scss' scoped>
-.head {
+.fw {
   text-align: center;
-}
-#data-v-55de609d {
-  // text-align: center;
   display: flex 1;
+  justify-content: space-around;
 }
+
 </style>

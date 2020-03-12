@@ -1,5 +1,5 @@
 import axios from './axioshttp1'
-import store from '../store'
+
 
 
 export function getMachineState() {
@@ -18,7 +18,7 @@ export function getStatisticalProcessing() {
 
 export function getOrderData() {
   return axios({
-    url: '/turn/api/services/app/Statistic/GetMaterialStatistic',
+    url: '/api/services/app/Statistic/GetMaterialStatistic',
 
   })
 }

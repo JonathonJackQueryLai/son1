@@ -136,6 +136,7 @@ div {
   border: 2px solid #ccc;
   background-color: brown;
   margin-top: auto;
+  display: flex;
 }
 .home-panel {
   vertical-align: center;

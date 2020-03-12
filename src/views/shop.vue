@@ -1,26 +1,33 @@
 <template>
   <div class="Shop">
-    <h2>
-      <a href="https://www.baidu.com/">百度</a>
-    </h2>
+    <newheader>
+      <button slot="left" @click="skip">返回</button>
+    </newheader>
+    <iframe class="Fcontnent" src="https://www.baidu.com/" scrolling="yes"></iframe>
+    <iframe class="Fcontnent1" src="https://www.tianmao.com/"></iframe>
   </div>
 </template>
 
 <script scope>
+import newheader from "@/common/newheader";
 export default {
   name: "Shop",
   data() {
     return {};
   },
-  components: {},
+  components: { newheader },
   created() {},
   mounted() {},
-  methods: {}
+  methods: {
+    skip() {
+      this.$router.push("/home");
+    }
+  }
 };
 </script>
 <style lang='scss' scoped>
-a {
-  background-color: red;
+.Fcontnent {
+  height: auto;
+  width: 100%;
 }
-
 </style>

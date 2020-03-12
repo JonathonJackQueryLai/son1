@@ -2,12 +2,12 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 
 Vue.use(Vuex)
-
+import { getStatisticPersonEfficiencyRate } from "@/http/machineInfo";
 export default new Vuex.Store({
   state: {
     // AuthToken:localStorage.getItem(),
     Authorization: localStorage.getItem('Authorization') ? localStorage.getItem('Authorization') : '',
-
+    demoarray: [],
     refreshToken: "",
     tokenString: '',
     counter2: 1000,
@@ -32,6 +32,20 @@ export default new Vuex.Store({
     array1: [1, 2, 3, 4]
   },
   mutations: {
+    effRes(state) {
+      getStatisticPersonEfficiencyRate().then(res => {
+        console.log(res.result);
+        state.demoarray.push(res.result);
+        return state.demoarray
+        // let co = 0;
+        // for (let item of res.result) {
+        //   console.log(co, item);
+        //   co += 1;
+        // }
+
+        // $store.demoarray = res.reuslt
+      });
+    },
     increase(state) {
       state.counter2++
     },
@@ -63,6 +77,7 @@ export default new Vuex.Store({
   // 如果数据需要经过处理后才能进行提取的 就在getters里面进行处理
 
   getters: {
+  
     tosarray(state) {
       return state.array1.toString()
     },
