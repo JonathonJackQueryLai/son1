@@ -5,9 +5,8 @@
     <router-link to="/vuexdemo1">vuexdemo1</router-link> |-->
     <!-- <router-link to="/newf">find</router-link>| -->
 
-          <headertab />
+    <headertab />
     <keep-alive>
-
       <router-view />
     </keep-alive>
   </div>
@@ -15,10 +14,15 @@
 
 <script>
 import headertab from "@/common/headertab";
+import Home from "@/views/Home";
+
+import statistics from '@/views/statistics';
 
 export default {
   name: "app",
   components: {
+    "v-home": Home,
+    "v-news": statistics,
     headertab
   }
 };

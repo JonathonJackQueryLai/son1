@@ -7,9 +7,8 @@
       <h2 class="title" slot="center">首页</h2>
       <h2 class="title2" slot="right"></h2>
     </newheader>
+    
     <div class="layout">
-
-
       <div>
         <button>
           <a href="/machineToolStatus" class="item1">机床状态</a>
@@ -20,7 +19,8 @@
           <a href="/statistics" class="item2">加工统计</a>
         </button>
       </div>
-      <div>+
+      <div>
+        +
         <button>
           <a href="/order" class="item3">订单分析</a>
         </button>
@@ -58,8 +58,8 @@
     </div>
 
     <!-- li.item$*10{你好$}*10+a[href=baidu.com] -->
-    
-    <ul class="content1 ">
+
+    <ul class="content1">
       <button class="item1">你好1</button>
       <button class="item2">你好2</button>
       <button class="item3">你好3</button>
@@ -75,14 +75,16 @@
 
 <script>
 import Vue from "vue";
+
 import newheader from "@/common/newheader";
+import VueEvent from "@/event/vuevent.js";
 // @ is an alias to /src
 // import BScroll from "@better-scroll/core";
 
 export default {
   created() {
-    let wrapper = document.querySelector(".content1");
-    let scroll = new BScroll(wrapper);
+    // let wrapper = document.querySelector(".content1");
+    // let scroll = new BScroll(wrapper);
   },
   data() {
     return {
@@ -92,6 +94,16 @@ export default {
   components: {
     // HelloWorld
     newheader
+  },
+  methods: {
+    toHome() {
+      VueEvent.$emit("to-home", this.msg);
+    }
+  },
+  mounted() {
+    VueEvent.$on("to-news", function(data) {
+      console.log(data);
+    });
   }
 };
 </script>
@@ -112,6 +124,4 @@ div {
   flex-wrap: wrap;
   justify-content: center;*/
 }
-
-
 </style>
